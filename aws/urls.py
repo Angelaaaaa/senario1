@@ -19,6 +19,8 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
 from login.views import *
 from django.contrib.auth import views as auth_views
+from . import settings
+
 
 urlpatterns = (
 
@@ -30,4 +32,6 @@ urlpatterns = (
     url(r'^login/login/$', auth_views.login),
     url(r'^register/success/$', register_success),
     url(r'^home/$', home),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
 )

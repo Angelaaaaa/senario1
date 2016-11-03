@@ -28,7 +28,7 @@ def register(request):
     })
 
     return render_to_response(
-    'registration/register.html',
+    'registration/login.html',
     variables,
     )
 
