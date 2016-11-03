@@ -58,7 +58,14 @@ def register(request):
     'form': form
     })
 
+<<<<<<< HEAD
     return render(request, 'registration/register.html', {'form': form})
+=======
+    return render_to_response(
+    'registration/login.html',
+    variables,
+    )
+>>>>>>> origin/master
 
 def register_success(request):
     return render_to_response(
